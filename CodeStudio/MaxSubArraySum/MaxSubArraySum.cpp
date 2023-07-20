@@ -6,19 +6,16 @@ using namespace std;
 
 long long maxSubarraySum(int arr[], int n)
 {
-    if (n == 0)
-        return 0;
-
-    sort(arr.begin(), arr.end());
-
-    long long sum = 0, maxSum = arr[0];
+    long long maxSum = 0;
+    long long currSum = 0;
 
     for (int i = 0; i < n; i++)
     {
-        sum += arr[i];
-        if (sum < 0) {
-            sum = 0;
-            maxSum = max(maxSum, sum);
+        currSum += arr[i];
+        maxSum = max(maxSum, currSum);
+
+        if (currSum < 0) {
+            currSum = 0;
         }
     }
 
