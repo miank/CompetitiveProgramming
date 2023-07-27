@@ -1,0 +1,51 @@
+// ValueEqualToIndexValue.cpp 
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+
+	vector<int> valueEqualToIndex(int arr[], int n) {
+		// code here
+
+		vector<int> v;
+		for (int i = 1; i < n; i++)
+		{
+			if (i == arr[i + 1])
+			{
+				v.push_back(i + 1);
+				break;
+			}
+		}
+		return v;
+	}
+};
+
+// { Driver Code Starts.
+
+int main() {
+	int t;
+	cin >> t;
+	while (t--) {
+		int n, i;
+		cin >> n;
+		int *arr = new int[n];
+		for (i = 0; i < n; i++) {
+			cin >> arr[i];
+		}
+		Solution ob;
+		auto ans = ob.valueEqualToIndex(arr, n);
+		if (ans.empty()) {
+			cout << "Not Found";
+		}
+		else {
+			for (int x : ans) {
+				cout << x << " ";
+			}
+		}
+		cout << "\n";
+	}
+	return 0;
+}
