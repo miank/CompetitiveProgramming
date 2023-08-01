@@ -1,9 +1,7 @@
-// if-else.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// if-else.cpp 
 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 string compareIfElse(int a, int b) {
@@ -11,21 +9,26 @@ string compareIfElse(int a, int b) {
 
 	int val1 = int(a);
 	int val2 = int(b);
+	string result = "";
 
 	if (val1 < val2) {
-		return "smaller";
+		result = "smaller";
 	}
 	else if (val1 > val2) {
-		return "greater";
+		result = "greater";
 	}
 	else {
-		return "equal";
+		result = "equal";
 	}
+
+	return result;
 }
 
 
 int main()
 {
-	cout << compareIfElse('a', 'b');
+	int a, b;
+	cin >> a >> b;
+	cout << compareIfElse(a, b);
 	return 0;
 }
