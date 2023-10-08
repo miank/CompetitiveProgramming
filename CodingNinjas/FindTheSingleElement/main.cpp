@@ -6,22 +6,23 @@ using namespace std;
 int getSingleElement(vector<int> &arr){
 	// Write your code here.	
 	
-    int num = 0;
-    map<int, int> m1;
-    for (int i = 0; i < arr.size(); i++)
+    int size = sizeof(arr) -1;
+    int i = 0, j = 1;
+    int missingNumber = 0;
+
+    for (int i = 0; i < size; i++)
     {
         /* code */
-        m1[arr[i]]++;
-    }
-
-    for(auto x : m1){
-        if(x.second == 1){
-            num = x.first;
+        if(i == size){
+            missingNumber = arr[i];
             break;
         }
+        if(arr[i] == arr[j]){
+            j++;
+            continue;
+        }
     }
-
-    return num;
+    return missingNumber;
 }
 
 int main(){
