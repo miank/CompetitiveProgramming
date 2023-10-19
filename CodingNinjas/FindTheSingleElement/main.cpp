@@ -5,27 +5,25 @@ using namespace std;
 
 int getSingleElement(vector<int> &arr){
 	// Write your code here.	
-	
-    int len = arr.size() - 1;
-    int i = 0, j = 1;
-    int missingNumber = -1;
-
-    for (int i = 0; i < len;)
+		
+    
+    int num = 0;
+    map<int, int> m1;
+    for (int i = 0; i < arr.size(); i++)
     {
         /* code */
-        if(arr[i] == arr[j]){
-            i++;
-            j++;
-            continue;
-        }
-        if(i == len){
-            missingNumber = arr[i];
-            break;
-        }
-        
+		if(arr[i] != arr[i+1]){
+            num = arr[i];
+			break;
+		}
+        if(arr[i] == arr[i+1]){
+			i++;
+			continue;
+		}
     }
 
-    return missingNumber;
+
+    return num;
 }
 
 int main(){
