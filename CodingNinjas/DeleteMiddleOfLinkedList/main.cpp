@@ -30,8 +30,6 @@ Node* deleteMiddle(Node* head){
 
     Node* prev = nullptr;
 
- 
-
     while(fast != nullptr && fast->next != nullptr){
 
         prev = slow;
@@ -43,10 +41,9 @@ Node* deleteMiddle(Node* head){
     }
 
     if(prev != nullptr)
-
-    prev->next = slow->next;
-
-    else head = head->next;
+        prev->next = slow->next;
+    else 
+        head = head->next;
 
     delete slow;
 
