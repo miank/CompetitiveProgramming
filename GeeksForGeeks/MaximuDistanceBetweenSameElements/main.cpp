@@ -4,7 +4,6 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
     public:
-    // your task is to complete this function
     int maxDistance(int arr[], int n)
     {
     //Code here
