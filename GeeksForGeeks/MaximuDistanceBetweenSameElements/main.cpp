@@ -1,13 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// } Driver Code Ends
 class Solution{
     public:
     int maxDistance(int arr[], int n)
     {
-    //Code here
-
+    
     unordered_map<int, int> mp;
 
     int max_dis = 0;
