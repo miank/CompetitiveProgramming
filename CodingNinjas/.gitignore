@@ -267,3 +267,4 @@ __pycache__/
 *pch.h
 *readme.txt
 *.props
+*launch.json
