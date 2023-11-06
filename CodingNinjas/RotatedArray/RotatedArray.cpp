@@ -1,34 +1,34 @@
-// RotatedArray.cpp 
+// RotatedArray.cpp
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int> rotateArray(vector<int>arr, int k) {
+vector<int> rotateArray(vector<int> arr, int k)
+{
     // Write your code here.
-
 
     int i = 1;
     int n = arr.size();
 
-    while(i <= k)
+    while (i <= k)
     {
-            int temp = arr[0];
-            for (int i = 0; i < n - 1; i++)
-            {
-                arr[i] = arr[i + 1];                
-            }
+        int temp = arr[0];
+        for (int i = 0; i < n - 1; i++)
+        {
+            arr[i] = arr[i + 1];
+        }
 
-            arr[n - 1] = temp;
-            i++;
+        arr[n - 1] = temp;
+        i++;
     }
 
-    return arr;        
+    return arr;
 }
 
 int main()
 {
-    vector<int> v{1,2,3,4,5};
+    vector<int> v{1, 2, 3, 4, 5};
     int k;
 
     vector<int> v1;
