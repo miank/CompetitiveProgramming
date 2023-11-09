@@ -14,9 +14,9 @@ class Solution
         if(a.length()==b.length()){
         sort(a.begin(),a.end());
         sort(b.begin(),b.end());
-        if(a!=b){
-            res=false;
-        }
+            if(a!=b){
+                res=false;
+            }
         }
         else {
             res=false;
